@@ -44,7 +44,7 @@
 	
 	<br><br>
 	<a>Exercicio 06</a>
-	<form action="">
+	<form action="pagina-include.jsp">
 		<button>Exercicio 06r</button>
 		
 	</form>

@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Exercicio 04</h1>
-	<a>Bem-vindo:<strong> ${USUARIO.numero}</strong> </a>
+	<a>Bem-vindo:<strong> ${USUARIO.numero}</strong> </a><br><br>
+	<a  href="index.jsp">Voltar Index</a>
 	
 </body>
 </html>
