@@ -8,8 +8,11 @@
 </head>
 <body>
 	<h1>Página de boas-vindas</h1>
-	<a>Bem-vindo: ${USUARIO.nome} </a>
+	<a><strong>Bem-vindo: ${USUARIO.nome}</strong> </a>
 	<h3>Tudo bem?</h3>
+	
+	<a href="pag-01.jsp">Página 1</a><br><br>
+	<a href="pag-02.jsp">Página 2</a><br><br>
 	<a href="index.jsp">Voltar para index</a>
 </body>
 </html>
