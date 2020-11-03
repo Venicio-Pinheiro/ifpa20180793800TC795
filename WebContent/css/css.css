@@ -1,0 +1,33 @@
+#pg01{ 
+	border: 2px blue solid;
+	border-radius: 10px;
+	padding: 10%;
+}
+#pa02 {
+	border: 2px blue solid;
+	border-radius: 10px;
+	width: 18%;
+	padding: 40px;
+	height: 300px;
+	float: left;
+}
+#pg03{
+	border: 2px blue solid;
+	border-radius: 10px;
+	padding: 40px;
+	height:300px;
+	width:60%;
+	float:right;
+	
+}
+.voltar{
+	border: 1px black solid;
+	text-align:center;
+	padding: 10px
+}
+	
+
+p{
+	text-align: center;
+}
+

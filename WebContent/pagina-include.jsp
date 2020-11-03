@@ -13,6 +13,8 @@
 <%@ include file="body.jsp" %>
 
 
-<a  href="index.jsp">Voltar Index</a>
+<footer>
+<a class="voltar" href="index.jsp">Voltar Index</a>
+</footer>
 </body>
 </html>
