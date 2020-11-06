@@ -25,6 +25,7 @@ public class servletRandomico extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Random random = new Random();
 		int numero = random.nextInt(10);
+		
 		Usuario usuario = new Usuario(numero);
 		request.getSession().setAttribute("USUARIO", usuario);
 		request.getRequestDispatcher("result.jsp").forward(request, response);
