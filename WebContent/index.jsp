@@ -52,6 +52,13 @@
 	<form action="pagina-include.jsp">
 		<button>Exercício 06</button>
 	</form>
+	
+	<br>
+	<br>
+	<a>Exercício 07</a>
+	<form action="">
+		<button>Formulário de Mensagem</button>
+	</form>
 
 
 </body>

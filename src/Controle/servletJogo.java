@@ -1,6 +1,7 @@
 package Controle;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 
@@ -10,15 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class servletJogo
- */
 @WebServlet("/servletJogo")
 public class servletJogo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		PrintWriter out = response.getWriter();
 		
 		//Receber a quatidade de jogos com getParameter
 		int qtdjogo = Integer.parseInt(request.getParameter("qtdJogos"));
@@ -33,8 +33,10 @@ public class servletJogo extends HttpServlet {
 		
 		//Definir a quantidade de jogos de
 		while(qtdjogo > contador) {
-			contador++;
-		response.getWriter().append(" [" + contador + "]  - ");
+			contador++;	
+		out.print("<html><body><h1><table = border=\"1\">");
+		out.print("Jogo - [ "+ contador + " ] - ");
+		
 		
 		//Desordear os 60 numeros da lista.
 		Collections.shuffle(numeros);
@@ -44,27 +46,25 @@ public class servletJogo extends HttpServlet {
 		
 		//Ordenar os 6 numeros do jogo
 		Collections.sort(escolhidos);
-		//request.setAttribute("escolhidos", escolhidos);
-		//RequestDispatcher rd  = request.getRequestDispatcher("resultadoMS.jsp"); rd.forward(request, response);
 		
 		//Adicionar o "0" a esquerda quando o numero for menor que 10 e exibir os valores
 		for(Integer escolhido: escolhidos) {
 			if(escolhido<10) {
-				response.getWriter().append("0" + escolhido + " ");
+				out.print("0" + escolhido + "  ");
 			}else {
-				response.getWriter().append( escolhido + " ");
+				out.print(escolhido + "  ");
 			}
-			
 		}
-		
+		out.print("</table></h1></body></html>");
 		//Separar os jogos
-		response.getWriter().append("<html><br></html>");
+		out.print("<h1>" + "<br>"+ "<h1>");
+		
+		
 		}
 		//Exibir a quantidade jogos
-		response.getWriter().append("Total de jogos" + contador);
+		out.println( "Total de " + contador + " jogos");
 		
-		
-		
+		out.println("<html> <bode><br> <a href=\"index.jsp\">Voltar para index</a> </bode> </html>");
 	}
 	
 
